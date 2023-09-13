@@ -3,6 +3,7 @@ import FeedbackButtons from './FeedbackButtons/FeedbackButtons';
 import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
+import style from './App.module.css';
 
 export const App = () => {
   const [feedbackCounts, setFeedbackCounts] = useState({
@@ -23,7 +24,7 @@ export const App = () => {
   return (
     <div className="container">
       <Section title="Please, leave us a feedback. We would appreciate it!">
-        <h2>Feedback</h2>
+        <h2 className={style.title}>Feedback</h2>
         <FeedbackButtons
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={handleFeedback}
@@ -31,9 +32,11 @@ export const App = () => {
       </Section>
 
       <Section>
-        <h2>Statistics</h2>
+        <h2 className={style.title}>Statistics</h2>
         {totalFeedback === 0 ? (
-          <Notification message="There is no feedback" />
+          <div className={style.title}>
+            <Notification message="There is no feedback" />
+          </div>
         ) : (
           <Statistics feedbackCounts={feedbackCounts} />
         )}
