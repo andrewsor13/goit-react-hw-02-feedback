@@ -8,22 +8,28 @@ export default function Statistics({ feedbackCounts }) {
     total === 0 ? 0 : ((good / total) * 100).toFixed(2);
   return (
     <div className={style.container}>
-      <h3>Statistics</h3>
       <ul className={style.ratings}>
         <li className={style.ratings__item}>
-          <p>Good: {good}</p>
+          <p>Good: </p>
+          <span className={style.feedback_good}>{good}</span>
         </li>
         <li className={style.ratings__item}>
-          <p>Neutral: {neutral}</p>
+          <p>Neutral: </p>
+          <span className={style.feedback_neutral}>{neutral}</span>
         </li>
         <li className={style.ratings__item}>
-          <p>Bad: {bad}</p>
+          <p>Bad: </p>
+          <span className={style.feedback_bad}>{bad}</span>
         </li>
         <li className={style.ratings__item}>
-          <p>Total: {total}</p>
+          <p>Total: </p>
+          <span>{total}</span>
         </li>
         <li className={style.ratings__item}>
-          <p>Positive feedback: {positivePercentage}%</p>
+          <p>Positive feedback: </p>
+          <span>
+            <strong>{positivePercentage}</strong>%
+          </span>
         </li>
       </ul>
     </div>

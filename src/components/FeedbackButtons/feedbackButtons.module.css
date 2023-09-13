@@ -2,14 +2,21 @@
   padding: 10px 20px;
   margin: 3px;
   font-size: 13px;
-  background-color: lightgrey;
+  background-color: coral;
   color: black;
   border: 2px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0px 0px 4px 2px rgb(146, 70, 43);
 }
 
 .button:hover {
-  background-color: #e5e3ec;
+  background-color: rgb(253, 162, 129);
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

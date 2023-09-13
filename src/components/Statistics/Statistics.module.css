@@ -1,5 +1,6 @@
 .container {
   margin-left: 30px;
+  margin-right: 20px;
 }
 
 .ratings {
@@ -12,5 +13,21 @@
 .ratings__item {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  justify-content: space-between;
+
+}
+
+.feedback_good {
+  color: rgb(64, 136, 64);
+  font-weight: bold;
+}
+
+.feedback_neutral {
+  color: rgb(228, 228, 21);
+  font-weight: bold;
+}
+
+.feedback_bad {
+  color: rgb(243, 79, 79);
+  font-weight: bold;
 }
